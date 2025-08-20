@@ -42,6 +42,12 @@
 <link rel="preconnect" href="https://demonslayer-hinokami.sega.com">
 <link rel="preconnect" href="https://m.media-amazon.com">
 <link rel="preconnect" href="https://upload.wikimedia.org">
+<link rel="preconnect" href="https://www.highperformanceformat.com">
+
+<!-- Ad-related meta tags -->
+<meta name="google-adsense-account" content="">
+<meta name="ads.txt" content="">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:;">
 
 <style>
   :root {
@@ -83,7 +89,7 @@
   <div class="content">
 
     <!-- AD SLOT: Top Banner -->
-    <div class="ad-slot">
+    <div class="ad-slot" id="top-banner-ad">
       <script type="text/javascript">
         atOptions = {
           'key' : '54cf02cb703d89a7882c2cdd8ab9bdec',
@@ -92,8 +98,21 @@
           'width' : 728,
           'params' : {}
         };
+        
+        // Debug logging
+        console.log('Top banner ad script loaded with options:', atOptions);
       </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/54cf02cb703d89a7882c2cdd8ab9bdec/invoke.js"></script>
+      <script type="text/javascript" src="https://www.highperformanceformat.com/54cf02cb703d89a7882c2cdd8ab9bdec/invoke.js" 
+        onerror="console.log('Failed to load top banner ad script')"
+        onload="console.log('Top banner ad script loaded successfully')">
+      </script>
+      
+      <!-- Fallback content -->
+      <noscript>
+        <div style="background:#2a3441; padding:20px; border-radius:8px; text-align:center;">
+          <p style="color:#9aa4b2; margin:0; font-size:14px;">Advertisement</p>
+        </div>
+      </noscript>
     </div>
 
   <div class="grid" id="anime-list">
@@ -149,7 +168,7 @@
 
 <!-- AD SLOT: Bottom Banner -->
 <div style="max-width:1100px; margin:0 auto; padding:16px;">
-  <div class="ad-slot">
+  <div class="ad-slot" id="bottom-banner-ad">
     <script type="text/javascript">
       atOptions = {
         'key' : '54cf02cb703d89a7882c2cdd8ab9bdec',
@@ -158,8 +177,21 @@
         'width' : 728,
         'params' : {}
       };
+      
+      // Debug logging
+      console.log('Bottom banner ad script loaded with options:', atOptions);
     </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/54cf02cb703d89a7882c2cdd8ab9bdec/invoke.js"></script>
+    <script type="text/javascript" src="https://www.highperformanceformat.com/54cf02cb703d89a7882c2cdd8ab9bdec/invoke.js" 
+      onerror="console.log('Failed to load bottom banner ad script')"
+      onload="console.log('Bottom banner ad script loaded successfully')">
+    </script>
+    
+    <!-- Fallback content -->
+    <noscript>
+      <div style="background:#2a3441; padding:20px; border-radius:8px; text-align:center;">
+        <p style="color:#9aa4b2; margin:0; font-size:14px;">Advertisement</p>
+      </div>
+    </noscript>
   </div>
 </div>
 
@@ -280,6 +312,32 @@
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(structuredData);
   document.head.appendChild(script);
+
+  // Ad debugging script
+  setTimeout(function() {
+    console.log('=== AD DEBUG INFO ===');
+    console.log('Page URL:', window.location.href);
+    console.log('User Agent:', navigator.userAgent);
+    
+    // Check if ad containers exist
+    const topAd = document.getElementById('top-banner-ad');
+    const bottomAd = document.getElementById('bottom-banner-ad');
+    
+    console.log('Top ad container:', topAd ? 'Found' : 'Missing');
+    console.log('Bottom ad container:', bottomAd ? 'Found' : 'Missing');
+    
+    if (topAd) {
+      console.log('Top ad content:', topAd.innerHTML.length > 500 ? 'Ad loaded' : 'Only placeholder');
+    }
+    if (bottomAd) {
+      console.log('Bottom ad content:', bottomAd.innerHTML.length > 500 ? 'Ad loaded' : 'Only placeholder');
+    }
+    
+    // Check for ad blockers
+    if (typeof window.atOptions === 'undefined') {
+      console.log('WARNING: Ad scripts may be blocked');
+    }
+  }, 3000);
 </script>
 
 </body>
