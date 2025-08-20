@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang=  const badge{background:#1b2333; padding:4px 8px; border-radius:999px; font-size:12px;}
+  .ad-slot{background:#1b2333; border:1px dashed #3a4866; border-radius:12px; padding:16px; text-align:center; color:#c6d0e0; font-size:14px; margin-bottom:16px;}
+  aside{display:none;}
+  @media(min-width:960px){aside{display:block; position:fixed; right:16px; top:100px; width:240px;}}
+  
+  /* Footer link hover effects */
+  footer a:hover{color:var(--accent) !important;}
+  
+  /* Responsive adjustments */
+  @media(max-width:768px){
+    .stats-grid{grid-template-columns:1fr !important;}
+    footer div[style*="flex-wrap"]{flex-direction:column; text-align:center;}
+  }>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Anime - Best Anime Series & Movies Rankings</title>
+<meta name="description" content="Discover the top-rated anime series and movies. Curated rankings based on fan reviews and ratings from Attack on Titan, One Piece, Naruto, and more.">
+<meta name="keywords" content="anime, top anime, best anime, anime rankings, anime reviews, manga, otaku, japanese animation">
+<meta name="author" content="Top Anime">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:title" content="Top Anime - Best Anime Series & Movies Rankings">
+<meta property="og:description" content="Discover the top-rated anime series and movies with fan reviews and ratings.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://your-app-name.vercel.app">
+<meta property="og:site_name" content="Top Anime">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Top Anime - Best Anime Series & Movies Rankings">
+<meta name="twitter:description" content="Discover the top-rated anime series and movies with fan reviews and ratings.">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎌</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎌</text></svg>">
+
+<!-- Preconnect to external domains for faster loading -->
+<link rel="preconnect" href="https://resizing.flixster.com">
+<link rel="preconnect" href="https://demonslayer-hinokami.sega.com">
+<link rel="preconnect" href="https://m.media-amazon.com">
+<link rel="preconnect" href="https://upload.wikimedia.org">
+
+<style>
+  :root {
+    --bg:#0f1115; --card:#161a22; --muted:#9aa4b2; --text:#e9eef5; --accent:#4da3ff; --ring:#223048;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:var(--text);}
+  header, footer{padding:16px; text-align:center; background:var(--card);}
+  header h1{margin:0;}
+  main.wrap{max-width:1100px; margin:0 auto; padding:16px; display:flex; flex-wrap:wrap; gap:16px;}
+  .content{flex:1; min-width:300px;}
+  .grid{display:grid; gap:16px; grid-template-columns:1fr;}
+  @media(min-width:600px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr);}}
+  .card{background:var(--card); border:1px solid var(--ring); border-radius:16px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.25); transition:transform .15s;}
+  .card:hover{transform:translateY(-2px); box-shadow:0 10px 26px rgba(0,0,0,.35);}
+  .thumb img{width:100%; display:block;}
+  .body{padding:12px;}
+  .title{margin:0 0 6px; font-weight:700;}
+  .desc{color:var(--muted); margin:0 0 8px; font-size:14px;}
+  .rating{display:flex; align-items:center; gap:6px;}
+  .stars{letter-spacing:1px;}
+  .badge{background:#1b2333; padding:4px 8px; border-radius:999px; font-size:12px;}
+  .ad-slot{background:#1b2333; border:1px dashed #3a4866; border-radius:12px; padding:16px; text-align:center; color:#c6d0e0; font-size:14px; margin-bottom:16px;}
+  aside{display:none;}
+  @media(min-width:960px){aside{display:block; position:sticky; top:100px; width:240px; flex-shrink:0;}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Top Anime</h1>
+  <p style="margin:8px 0 0; color:var(--muted); font-size:16px;">Discover the best anime series and movies of all time</p>
+  <p style="margin:4px 0 0; color:var(--muted); font-size:14px;">Curated rankings • Reviews • Ratings from anime fans worldwide</p>
+</header>
+
+<main class="wrap">
+
+  <div class="content">
+
+    <!-- AD SLOT: Top Banner -->
+    <div class="ad-slot">
+      Top Banner Ad (728x90 placeholder)
+      <small>Replace with Adsterra script</small>
+    </div>
+
+  <div class="grid" id="anime-list">
+    <!-- Anime cards will be injected here -->
+  </div>
+
+  <!-- About Section -->
+  <section style="margin:32px 0; padding:24px; background:var(--card); border-radius:16px; border:1px solid var(--ring);">
+    <h2 style="margin:0 0 16px; color:var(--accent);">About Top Anime</h2>
+    <p style="color:var(--muted); line-height:1.6; margin:0 0 12px;">Welcome to Top Anime, your ultimate destination for discovering the most acclaimed anime series and movies. Our carefully curated list features the highest-rated anime based on fan reviews, critical acclaim, and cultural impact.</p>
+    <p style="color:var(--muted); line-height:1.6; margin:0;">From epic adventures like Attack on Titan and One Piece to supernatural thrillers like Death Note, explore the diverse world of anime that has captivated audiences globally.</p>
+  </section>
+
+  <!-- Stats Section -->
+  <section style="margin:32px 0;">
+    <div style="display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));">
+      <div style="background:var(--card); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--ring);">
+        <div style="font-size:28px; font-weight:700; color:var(--accent); margin-bottom:4px;">9</div>
+        <div style="color:var(--muted); font-size:14px;">Featured Anime</div>
+      </div>
+      <div style="background:var(--card); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--ring);">
+        <div style="font-size:28px; font-weight:700; color:var(--accent); margin-bottom:4px;">8.9</div>
+        <div style="color:var(--muted); font-size:14px;">Average Rating</div>
+      </div>
+      <div style="background:var(--card); padding:20px; border-radius:12px; text-align:center; border:1px solid var(--ring);">
+        <div style="font-size:28px; font-weight:700; color:var(--accent); margin-bottom:4px;">100K+</div>
+        <div style="color:var(--muted); font-size:14px;">Fan Reviews</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section - Compact -->
+  <section style="margin:24px 0; padding:16px; background:var(--card); border-radius:12px; border:1px solid var(--ring);">
+    <h3 style="margin:0 0 12px; color:var(--accent); font-size:16px;">Popular Genres</h3>
+    <div style="display:flex; flex-wrap:wrap; gap:6px;">
+      <span style="background:#1e3a5f; color:var(--text); padding:4px 10px; border-radius:16px; font-size:12px;">🗡️ Action</span>
+      <span style="background:#1e3a5f; color:var(--text); padding:4px 10px; border-radius:16px; font-size:12px;">🧙 Fantasy</span>
+      <span style="background:#1e3a5f; color:var(--text); padding:4px 10px; border-radius:16px; font-size:12px;">❤️ Romance</span>
+      <span style="background:#1e3a5f; color:var(--text); padding:4px 10px; border-radius:16px; font-size:12px;">😂 Comedy</span>
+      <span style="background:#1e3a5f; color:var(--text); padding:4px 10px; border-radius:16px; font-size:12px;">🤖 Mecha</span>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- Sidebar Ad for desktop -->
+  <aside class="ad-slot">
+    Sidebar Ad (300x600 placeholder)
+    <small>Visible on desktop</small>
+  </aside>
+
+</main>
+
+<!-- AD SLOT: Bottom Banner -->
+<div style="max-width:1100px; margin:0 auto; padding:16px;">
+  <div class="ad-slot">
+    Bottom Banner Ad (728x90 placeholder)
+    <small>Replace with Adsterra script</small>
+  </div>
+</div>
+
+<footer>
+  <div style="max-width:1100px; margin:0 auto; padding:32px 16px;">
+    
+    <!-- Footer Content Grid -->
+    <div style="display:grid; gap:32px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-bottom:24px;">
+      
+      <!-- About Column -->
+      <div>
+        <h3 style="margin:0 0 12px; color:var(--accent); font-size:18px;">Top Anime</h3>
+        <p style="color:var(--muted); font-size:14px; line-height:1.5; margin:0 0 16px;">Your trusted source for anime rankings, reviews, and recommendations. Discover the most beloved anime series and movies that have shaped the culture worldwide.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 style="margin:0 0 12px; color:var(--text);">Quick Links</h4>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px; transition:color 0.2s;">🏠 Home</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px; transition:color 0.2s;">📊 Top Rankings</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px; transition:color 0.2s;">🎬 New Releases</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px; transition:color 0.2s;">📝 Reviews</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px; transition:color 0.2s;">📰 News</a>
+        </div>
+      </div>
+
+      <!-- Genres -->
+      <div>
+        <h4 style="margin:0 0 12px; color:var(--text);">Browse Genres</h4>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px;">⚔️ Action & Adventure</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px;">🏫 School & Romance</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px;">🌟 Fantasy & Magic</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px;">🤖 Sci-Fi & Mecha</a>
+          <a href="#" style="color:var(--muted); text-decoration:none; font-size:14px;">🔍 Mystery & Thriller</a>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div style="border-top:1px solid var(--ring); padding-top:20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+      <div style="color:var(--muted); font-size:13px;">
+        &copy; <span id="year"></span> Top Anime. All rights reserved. • Made with ❤️ for anime fans
+      </div>
+      <div style="color:var(--muted); font-size:13px;">
+        🌟 Rating data from <strong>MAL</strong> • <strong>AniDB</strong> • <strong>Crunchyroll</strong>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const animeList = [
+    {title:"Attack on Titan", description:"Humanity lives inside cities surrounded by enormous walls due to Titans.", rating:9.0, image:"https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p10701949_b_v9_ah.jpg"},
+    {title:"Demon Slayer", description:"A young man becomes a demon slayer to save his sister.", rating:8.7, image:"https://demonslayer-hinokami.sega.com/img/purchase/digital-deluxe.jpg"},
+    {title:"One Piece", description:"Monkey D. Luffy gains rubber powers and explores the Grand Line.", rating:9.2, image:"https://m.media-amazon.com/images/S/pv-target-images/a0cb3885c44b8305ac89ba7ce98e8cd978bf3ebba6a151a00dbf2d528e98bf3b.jpg"},
+    {title:"Naruto", description:"Naruto Uzumaki seeks recognition and dreams of becoming Hokage.", rating:8.8, image:"https://upload.wikimedia.org/wikipedia/en/thumb/9/94/NarutoCoverTankobon1.jpg/250px-NarutoCoverTankobon1.jpg"},
+    {title:"My Hero Academia", description:"A powerless boy enrolls in a hero academy.", rating:8.5, image:"https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Boku_no_Hero_Academia_Volume_1.png/250px-Boku_no_Hero_Academia_Volume_1.png"},
+    {title:"Death Note", description:"A student discovers a notebook that can kill anyone whose name is written.", rating:9.0, image:"https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"},
+    {title:"Dragon Ball Z", description:"Goku continues adventures with his family and alien origins revealed.", rating:8.9, image:"https://m.media-amazon.com/images/S/pv-target-images/f915667ba24da046a50e867496d7b0df9c64b3b7bcb37a2191c86214b201770f.jpg"},
+    {title:"Spirited Away", description:"A girl wanders into a world ruled by gods and witches.", rating:9.3, image:"https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Spirited_Away_Japanese_poster.png/250px-Spirited_Away_Japanese_poster.png"},
+    {title:"Princess Mononoke", description:"Ashitaka finds himself in a war between forest gods and humans.", rating:8.9, image:"https://upload.wikimedia.org/wikipedia/en/8/8c/Princess_Mononoke_Japanese_poster.png"}
+  ];
+
+  function makeStars(rating){
+    const full = Math.floor(rating/2);
+    const half = rating/2 - full >= 0.5 ? 1 : 0;
+    const empty = 5-full-half;
+    return "★".repeat(full) + (half?"☆":"") + "✩".repeat(empty);
+  }
+
+  const list = document.getElementById("anime-list");
+  animeList.forEach((item, idx)=>{
+    const div = document.createElement("div");
+    div.className="card";
+    div.innerHTML=`<div class="thumb"><img src="${item.image}" alt="${item.title}"></div>
+      <div class="body">
+        <h3 class="title">${item.title}</h3>
+        <p class="desc">${item.description}</p>
+        <div class="rating">
+          <strong>${item.rating}</strong>
+          <span class="stars">${makeStars(item.rating)}</span>
+          <span class="badge">⭐</span>
+        </div>
+      </div>`;
+    list.appendChild(div);
+
+    // Insert in-feed ad after 3rd card
+    if(idx===2){
+      const adDiv = document.createElement("div");
+      adDiv.className="ad-slot";
+      adDiv.innerHTML="In-Feed Ad (728x90 placeholder)<br><small>Replace with Adsterra script</small>";
+      list.appendChild(adDiv);
+    }
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Add structured data for SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Top Anime",
+    "description": "Discover the top-rated anime series and movies with curated rankings and reviews",
+    "url": window.location.origin,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://your-app-name.vercel.app/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(structuredData);
+  document.head.appendChild(script);
+</script>
+
+</body>
+</html>

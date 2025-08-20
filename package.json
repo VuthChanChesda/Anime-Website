@@ -1,0 +1,25 @@
+{
+  "name": "top-anime-website",
+  "version": "1.0.0",
+  "description": "Top Anime - Best Anime Series & Movies Rankings",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "anime",
+    "rankings",
+    "reviews",
+    "top-anime",
+    "japanese-animation"
+  ],
+  "author": "Top Anime",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/top-anime-website.git"
+  },
+  "homepage": "https://your-app-name.vercel.app"
+}
