@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "Top Anime - Best Anime Series & Movies Rankings",
   "main": "index.html",
-  "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Static site - no build needed'",
-    "start": "vercel dev"
-  },
   "keywords": [
     "anime",
     "rankings",
